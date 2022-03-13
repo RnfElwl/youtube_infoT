@@ -1,3 +1,5 @@
+<%@page import="java.sql.*"%>
+<%@page import="DBPKG.Util"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,13 +10,32 @@
 </head>
 <body style="margin:0; padding:0">
 <jsp:include page="header.jsp"></jsp:include>
+
+<%
+Connection conn = null;
+Statement stmt = null;
+String custno = "";
+
+try{
+	conn = Util.getConnection();
+	stmt = conn.createStatement();
+	String sql = "SELECT MAX(custno)+1 custno FROM member_tbl_02";
+	ResultSet rs = stmt.executeQuery(sql);
+	rs.next();
+	custno = rs.getString("custno");
+}
+catch(Exception e){
+	e.printStackTrace();
+}
+%>
+
 	<section style="position:fixed; top:60px; width:100%; height:100%; background-color:lightgray ">
 	 <h2 style="text-align:center">홈쇼핑 회원 등록</h2><br>
 	 <form name="frm" style="display:flex; justify-content: center; align-items: center ">
 	 <table border="1"; style="text-align:center" >
 	 <tr>
 	 	<td>회원번호(자동발생)</td>
-	 	<td><input type="text" name="custnum" readonly></td>
+	 	<td><input type="text" name="custnum" value="<%= custno %>" readonly></td>
 	 </tr>
 	 <tr>
 	 	<td>회원성명</td>
