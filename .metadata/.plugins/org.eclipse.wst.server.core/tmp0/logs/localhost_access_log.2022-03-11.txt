@@ -1,0 +1,12 @@
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:00:41:34 +0900] "GET /HRD_30812/index.jsp HTTP/1.1" 200 1908
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:00:43:46 +0900] "GET /HRD_30812/index.jsp HTTP/1.1" 200 1927
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:00:45:57 +0900] "GET /HRD_30812/index.jsp HTTP/1.1" 200 1937
+127.0.0.1 - - [11/Mar/2022:22:44:27 +0900] "GET / HTTP/1.1" 404 808
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:44:28 +0900] "GET /HRD_30812/join.jsp HTTP/1.1" 200 2113
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:44:29 +0900] "GET /favicon.ico HTTP/1.1" 404 819
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:47:24 +0900] "GET /HRD_30812/join.jsp HTTP/1.1" 200 2192
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:49:02 +0900] "GET /HRD_30812/join.jsp HTTP/1.1" 200 2204
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:50:10 +0900] "GET /HRD_30812/join.jsp HTTP/1.1" 200 2232
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:52:22 +0900] "GET /HRD_30812/join.jsp?custnum=&custname=&phone=&address=&joindate=&grade=&city= HTTP/1.1" 200 2232
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:52:22 +0900] "GET /HRD_30812/join.jsp?custnum=&custname=&phone=&address=&joindate=&grade=&city= HTTP/1.1" 200 2232
+0:0:0:0:0:0:0:1 - - [11/Mar/2022:22:52:24 +0900] "GET /HRD_30812/join.jsp?custnum=&custname=&phone=&address=&joindate=&grade=&city= HTTP/1.1" 200 2232
