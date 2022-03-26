@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>list</title>
 </head>
 <body style="margin:0; padding:0;">
 	<jsp:include page="header.jsp"/>
@@ -56,7 +56,7 @@
 	 %>
 	 
 	 <tr>
-	 	<td><%= rs.getString("custno") %></td>
+	 	<td><a href="modify.jsp?mod_custno=<%= rs.getString("custno") %>"><%= rs.getString("custno") %></a></td>
 	 	<td><%= rs.getString("custname") %></td>
 	 	<td><%= rs.getString("phone") %></td>
 	 	<td><%= rs.getString("address") %></td>

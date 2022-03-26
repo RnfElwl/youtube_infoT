@@ -9,9 +9,19 @@
 <title>join</title>
 </head>
 <body style="margin:0; padding:0">
+<script type="text/javascript" src="check.js"></script>
 <jsp:include page="header.jsp"></jsp:include>
 
-<%
+
+
+	<section style="position:fixed; top:60px; width:100%; height:100%; background-color:lightgray ">
+	 <h2 style="text-align:center">홈쇼핑 회원 등록</h2><br>
+	 <form method="post" action="action.jsp" name="frm" style="display:flex; justify-content: center; align-items: center; text-align:center">
+	 
+	 <input type="hidden" name="mode" value="insert">
+	 
+	 <table border="1" >
+	 <%
 Connection conn = null;
 Statement stmt = null;
 String custno = "";
@@ -28,14 +38,9 @@ catch(Exception e){
 	e.printStackTrace();
 }
 %>
-
-	<section style="position:fixed; top:60px; width:100%; height:100%; background-color:lightgray ">
-	 <h2 style="text-align:center">홈쇼핑 회원 등록</h2><br>
-	 <form name="frm" style="display:flex; justify-content: center; align-items: center ">
-	 <table border="1"; style="text-align:center" >
 	 <tr>
 	 	<td>회원번호(자동발생)</td>
-	 	<td><input type="text" name="custnum" value="<%= custno %>" readonly></td>
+	 	<td><input type="text" name="custno" value="<%= custno %>" readonly></td>
 	 </tr>
 	 <tr>
 	 	<td>회원성명</td>
@@ -64,7 +69,7 @@ catch(Exception e){
 	 <tr>
 	 	<td colspan="2">
 	 		<input type="submit" value="등록" onclick="return joinCheck()">
-	 		<input type="button" value="조회" onclick="window.location='list.jsp'">
+	 		<input type="button" value="조회" onclick="return search()">
 	 	</td>
 	 </tr>
 	 </table>
@@ -73,5 +78,5 @@ catch(Exception e){
 	 <jsp:include page="footer.jsp"></jsp:include>
 	 
 </body>
-<script type="text/javascript" src="check.js"></script>
+
 </html>

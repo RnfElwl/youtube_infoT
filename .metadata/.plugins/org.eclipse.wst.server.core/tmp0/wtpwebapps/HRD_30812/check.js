@@ -30,6 +30,7 @@ function joinCheck(){
 		frm.city.focus();
 		return false;
 	}
+	success()
 	return true;
 }
 
@@ -42,7 +43,9 @@ function search(){
 	window.location = "list.jsp";
 
 }
-
+function modify(){
+	alert("회원정보 수정이 완료 되었습니다.");
+}
 
 
 
